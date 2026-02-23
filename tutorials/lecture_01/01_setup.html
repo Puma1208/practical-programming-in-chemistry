@@ -1290,6 +1290,35 @@ conda install jupyterlab</code></pre>
               </li>
             </ol>
           </section>
+          <section id="creating-a-project-with-uv">
+            <h3 class="anchored" data-anchor-id="creating-a-project-with-uv">
+              Creating a project with <code>uv</code>
+            </h3>
+            <p>
+              In your desired parent directory, initialize the project with the
+              following commands:
+            </p>
+            <ul>
+              <li>
+                <code>uv init my-project-with-uv</code>
+              </li>
+              <li>
+                <code>cd my-project-with-uv</code>
+              </li>
+            </ul>
+            <p>
+              <code>uv</code> automatically creates the following files,
+              essential for project management:
+            </p>
+            <pre><code
+              >├── .gitignore <br />├── .python-version <br />├── README.md<br />├── main.py <br />└── pyproject.toml
+            </code></pre>
+            <p>
+              Run the simple program in <code>main.py</code> running the
+              following:
+            </p>
+            <code>uv run main.py</code>
+          </section>
         </section>
         <section id="introduction-to-ides-and-text-editors" class="level2">
           <h2
