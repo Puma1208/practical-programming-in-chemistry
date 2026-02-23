@@ -1212,19 +1212,84 @@ conda install jupyterlab</code></pre>
         </section>
         <section id="alternative-to-anaconda-uv" class="level2">
           <h2 class="anchored" data-anchor-id="alternative-to-anaconda-uv">
-            Alternative to Anaconda: <code>uv</code>
+            Alternative to Anaconda:
+            <strong>
+              <code><a href="https://docs.astral.sh/uv/">uv</a></code>
+            </strong>
           </h2>
           <p>
             While using Conda has its own advantages, such as handling both the
             Python versions and the system-level dependencies, switching between
-            different Python version and so on, <code>uv</code> is known to be
-            not only very fast, but also replacing multiple tools:
+            different Python version and so on,
+            <strong>
+              <code><a href="https://docs.astral.sh/uv/">uv</a></code>
+            </strong>
+            is known to be not only very fast, but also replacing multiple
+            tools:
           </p>
           <ul>
             <li>Installing packages like <code>pip</code></li>
             <li>Creating virtual environments like <code>venv</code></li>
             <li>Resolving dependencies like <code>pip-tools</code></li>
           </ul>
+          <section id="getting-started-with-uv">
+            <h3 class="anchored" data-anchor-id="getting-started-with-uv">
+              Getting started with <code>uv</code>
+            </h3>
+            <ol>
+              <li>
+                <strong>Installation.</strong> Run one of the following commands
+                to install <code>uv</code>, choose based on your : <br />
+
+                <div class="box">
+                  <pre>
+                    <code>
+                      # On Linux and macOS in the terminal
+                      curl -LsSf https://astral.sh/uv/install.sh | sh
+                    </code>
+                  </pre>
+                  <pre><code>
+                    # On Windows in the PowerShell
+                    powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+                  </code></pre>
+                </div>
+
+                If you prefer installing <code>uv</code> with Homebrew,
+                <code>pip</code>, WinGet or any other package manager, the
+                documentation for the different installation methods can be
+                found
+                <a
+                  href="https://docs.astral.sh/uv/getting-started/installation/"
+                  >on this page</a
+                >.
+              </li>
+              <li>
+                <strong>Verify the installation.</strong>To check is
+                <code>uv</code> is well installed, you can run a version check
+                command
+                <pre><code>uv --version</code></pre>
+                or simply
+                <pre><code>uv</code></pre>
+                which should display a help menu with the commands you can use
+                with <code>uv</code>.
+              </li>
+              <li>
+                <strong>Installing Python</strong>.
+                <p>
+                  If Python is not yet installed on your computer, you can
+                  install a specific version directly with
+                  <code>uv</code>.
+                  <br />
+                </p>
+                <pre><code>uv python install</code></pre>
+                <p>
+                  You can also specify the preferred Python version, for
+                  instance, installing Python 3.12.0
+                </p>
+                <pre><code>uv python install 3 .12</code></pre>
+              </li>
+            </ol>
+          </section>
         </section>
         <section id="introduction-to-ides-and-text-editors" class="level2">
           <h2
