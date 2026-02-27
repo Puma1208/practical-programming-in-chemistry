@@ -1239,39 +1239,60 @@ conda install jupyterlab</code></pre>
             <ol>
               <li>
                 <strong>Installation.</strong> Run one of the following commands
-                to install <code>uv</code>, choose based on your : <br />
-
-                <div class="box">
-                  <pre>
-                    <code>
-                      # On Linux and macOS in the terminal
-                      curl -LsSf https://astral.sh/uv/install.sh | sh
-                    </code>
-                  </pre>
-                  <pre><code>
-                    # On Windows in the PowerShell
-                    powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-                  </code></pre>
+                to install <code>uv</code>, choose based on your operating
+                system: <br />
+                <div class="code-copy-outer-scaffold">
+                  <div class="sourceCode" id="cb2">
+                    <pre class="sourceCode bash code-with-copy">
+                      <code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># On Linux and macOS in the terminal</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-LsSf</span> https://astral.sh/uv/install.sh <span class="kw">|</span> <span class="fu">sh</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre>
+                  </div>
                 </div>
-
-                If you prefer installing <code>uv</code> with Homebrew,
-                <code>pip</code>, WinGet or any other package manager, the
-                documentation for the different installation methods can be
-                found
-                <a
-                  href="https://docs.astral.sh/uv/getting-started/installation/"
-                  >on this page</a
-                >.
+                <hr />
+                <div class="code-copy-outer-scaffold">
+                  <div class="sourceCode" id="cb3">
+                    <pre class="sourceCode bash code-with-copy">
+                      <code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># On Windows in the PowerShell</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">powershell</span> <span class="at">-ExecutionPolicy</span> ByPass <span class="at">-c</span> <span class="st">"irm https://astral.sh/uv/install.ps1 | iex"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre>
+                  </div>
+                </div>
+                <p>
+                  If you prefer installing <code>uv</code> with Homebrew,
+                  <code>pip</code>, WinGet or any other package manager, the
+                  documentation for the different installation methods can be
+                  found
+                  <a
+                    href="https://docs.astral.sh/uv/getting-started/installation/"
+                    >on this page</a
+                  >.
+                </p>
               </li>
               <li>
-                <strong>Verify the installation.</strong>To check is
-                <code>uv</code> is well installed, you can run a version check
-                command
-                <pre><code>uv --version</code></pre>
-                or simply
-                <pre><code>uv</code></pre>
-                which should display a help menu with the commands you can use
-                with <code>uv</code>.
+                <p>
+                  <strong>Verify the installation.</strong>To check is
+                  <code>uv</code> is well installed, you can run a version check
+                  command
+                </p>
+                <div class="code-copy-outer-scaffold">
+                  <div class="sourceCode" id="cb4">
+                    <pre
+                      class="sourceCode bash code-with-copy"
+                    ><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre>
+                  </div>
+                </div>
+                <p>or simply</p>
+                <div class="code-copy-outer-scaffold">
+                  <div class="sourceCode" id="cb5">
+                    <pre
+                      class="sourceCode bash code-with-copy"
+                    ><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre>
+                  </div>
+                </div>
+
+                <p>
+                  which should display a help menu with the commands you can use
+                  with <code>uv</code>.
+                </p>
               </li>
               <li>
                 <strong>Installing Python</strong>.
@@ -1281,12 +1302,24 @@ conda install jupyterlab</code></pre>
                   <code>uv</code>.
                   <br />
                 </p>
-                <pre><code>uv python install</code></pre>
+                <div class="code-copy-outer-scaffold">
+                  <div class="sourceCode" id="cb4">
+                    <pre
+                      class="sourceCode bash code-with-copy"
+                    ><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> python install</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre>
+                  </div>
+                </div>
                 <p>
                   You can also specify the preferred Python version, for
                   instance, installing Python 3.12.0
                 </p>
-                <pre><code>uv python install 3 .12</code></pre>
+                <div class="code-copy-outer-scaffold">
+                  <div class="sourceCode" id="cb7">
+                    <pre
+                      class="sourceCode bash code-with-copy"
+                    ><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> python install 3 .12</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre>
+                  </div>
+                </div>
               </li>
             </ol>
           </section>
@@ -1298,21 +1331,31 @@ conda install jupyterlab</code></pre>
               In your desired parent directory, initialize the project with the
               following commands:
             </p>
-            <ul>
-              <li>
-                <code>uv init my-project-with-uv</code>
-              </li>
-              <li>
-                <code>cd my-project-with-uv</code>
-              </li>
-            </ul>
+            <div class="code-copy-outer-scaffold">
+              <div class="sourceCode" id="cb8">
+                <pre
+                  class="sourceCode bash code-with-copy"
+                ><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init my-project-with-uv</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> my-project-with-uv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre>
+              </div>
+            </div>
+
             <p>
               <code>uv</code> automatically creates the following files,
               essential for project management:
             </p>
-            <pre><code
-              >├── .gitignore <br />├── .python-version <br />├── README.md<br />├── main.py <br />└── pyproject.toml
-            </code></pre>
+            <div class="code-copy-outer-scaffold">
+              <div class="sourceCode" id="cb9">
+                <pre
+                  class="sourceCode bash code-with-copy"
+                ><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> .gitignore</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> .python-version</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> README.md</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> main.py</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="ex">└──</span> pyproject.toml</span></code></pre>
+              </div>
+            </div>
+
             <p>
               Run the simple program in <code>main.py</code> using the following
               command:
